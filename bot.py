@@ -36,9 +36,9 @@ async def get_films_cinema(query) -> list:
 
 async def get_films_rezka(query) -> list:
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless")
+    options.add_argument('--headless')
 
-    driver = webdriver.Chrome(chrome_options=options)
+    driver = webdriver.Chrome(options=options)
     my_url = f'https://kinopub.me/search/?do=search&subaction=search&q={query}'
 
     driver.get(my_url)
